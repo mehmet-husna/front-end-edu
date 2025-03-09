@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Forms Demo</title>
+    </head>
+    <body>
+        <h1>Forms Demo</h1>
+        <form action="/food">
+            <div>
+                <label for="userName">Kullanici adi giriniz: </label>
+                <input
+                    id="userName"
+                    type="text"
+                    placeholder="Kullanıcı Adı"
+                    name="userName"
+                />
+            </div>
+            <div>
+                <label for="password">Sifre giriniz: </label>
+                <input
+                    id="password"
+                    type="password"
+                    placeholder="Şifre Giriniz"
+                    name="password"
+                />
+            </div>
+            <div>
+                <label for="color">Renk seciniz: </label>
+                <input id="color" type="color" />
+            </div>
+            <div>
+                <label for="number">Sayi giriniz: </label>
+                <input id="number" type="number" placeholder="number" />
+            </div>
+            <button>Submit</button>
+        </form>
+
+        <h2>Daha Fazla Input</h2>
+        <form action="/spare">
+            <label for="tos">Kabul ediyorum</label>
+            <input type="checkbox" name="tos" id="tos" checked />
+            <div>
+                <label for="xs">XS:</label>
+                <input type="radio" name="size" id="xs" value="xs" />
+                <label for="s">S</label>
+                <input type="radio" name="size" id="s" value="s" />
+                <label for="m">M</label>
+                <input type="radio" name="size" id="m" value="m" />
+            </div>
+            <div>
+                <label for="animal">Favori hayvanın:</label>
+                <select name="animal" id="animal">
+                    <option value="">Seçiniz</option>
+                    <option value="fish">Balık</option>
+                    <option value="dog">Köpek</option>
+                    <option value="charset" selected>Kedi</option>
+                </select>
+            </div>
+            <div>
+                <label for="cheese">Evdeki peynir miktarı:</label>
+                <input
+                    type="range"
+                    name="cheese"
+                    id="cheese"
+                    min="1"
+                    max="10"
+                    value="5"
+                />
+            </div>
+            <div>
+                <label for="number"></label>
+                <input
+                    type="number"
+                    min="1"
+                    max="10"
+                    name="number"
+                    id="number"
+                />
+            </div>
+            <div>
+                <label for="wish">İstek ve Önerileriniz:</label><br />
+                <textarea
+                    placeholder="Buraya isteklerinizi yazabilirsiniz.."
+                    cols="30"
+                    rows="10"
+                    name="wish"
+                    id="wish"
+                ></textarea>
+            </div>
+            <button>Gönder</button>
+        </form>
+
+        <h2>Validations</h2>
+        <form action="/birds">
+            <label for="first">isim giriniz:</label>
+            <input type="text" name="first" id="first" required/>
+            <br />
+            <label for="userName">kullanici adi:</label>
+            <input
+                type="text"
+                name="userName"
+                id="userName"
+                minlength="5"
+                maxlength="25"
+                required
+            />
+            <input type="url" name="first" id="first">
+            <button>Submit</button>
+        </form>
+    </body>
+</html>
